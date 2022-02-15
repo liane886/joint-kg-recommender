@@ -1,0 +1,76 @@
+2022-02-15 18:00:49,925 - root - INFO - Flag Values:
+{
+    "L1_flag": false,
+    "batch_size": 512,
+    "ckpt_path": "/export/data/RA_Work/LipingWang/joint-kg-recommender_fork/log/",
+    "clipping_max_value": 5.0,
+    "data_path": "/export/data/RA_Work/LipingWang/joint-kg-recommender_fork/datasets/",
+    "dataset": "ml1m",
+    "early_stopping_steps_to_wait": 70000,
+    "embedding_size": 64,
+    "eval_interval_steps": 14000,
+    "eval_only_mode": false,
+    "experiment_name": "ml1m-jtransup-1644919249",
+    "filter_wrong_corrupted": true,
+    "has_visualization": false,
+    "is_report": false,
+    "joint_ratio": 0.5,
+    "kg_lambda": 1.0,
+    "kg_test_files": "valid.dat:test.dat",
+    "l2_lambda": 1e-05,
+    "learning_rate": 0.001,
+    "learning_rate_decay_when_no_progress": 0.5,
+    "load_ckpt_file": null,
+    "load_experiment_name": null,
+    "log_level": "debug",
+    "log_path": "/export/data/RA_Work/LipingWang/joint-kg-recommender_fork/log/",
+    "margin": 1.0,
+    "max_queue": 10,
+    "model_type": "jtransup",
+    "momentum": 0.9,
+    "negtive_samples": 1,
+    "norm_lambda": 1.0,
+    "num_preferences": 4,
+    "num_processes": 4,
+    "optimizer_type": "Adagrad",
+    "rec_test_files": "valid.dat:test.dat",
+    "seed": 0,
+    "share_embeddings": false,
+    "topn": 10,
+    "training_steps": 1400000,
+    "use_st_gumbel": false,
+    "visualization_port": 8097
+}
+2022-02-15 18:00:52,225 - root - INFO - Totally 701669 train ratings, 103239,193631 eval ratings in files: /export/data/RA_Work/LipingWang/joint-kg-recommender_fork/datasets/ml1m/valid.dat;/export/data/RA_Work/LipingWang/joint-kg-recommender_fork/datasets/ml1m/test.dat!
+2022-02-15 18:00:52,236 - root - INFO - successfully load 6040 users and 3260 items!
+2022-02-15 18:00:54,801 - root - INFO - Totally 303935 train triples, 43419,86835 eval triples in files: /export/data/RA_Work/LipingWang/joint-kg-recommender_fork/datasets/ml1m/kg/valid.dat;/export/data/RA_Work/LipingWang/joint-kg-recommender_fork/datasets/ml1m/kg/test.dat!
+2022-02-15 18:00:54,853 - root - INFO - successfully load 14708 entities and 20 relations!
+2022-02-15 18:00:55,392 - root - INFO - Find 2934 aligned items and entities!
+2022-02-15 18:00:55,394 - root - INFO - Building model.
+2022-02-15 18:00:59,616 - root - INFO - Architecture: jTransUPModel(
+  (user_embeddings): Embedding(6040, 64)
+  (item_embeddings): Embedding(3260, 64)
+  (pref_embeddings): Embedding(20, 64)
+  (pref_norm_embeddings): Embedding(20, 64)
+  (ent_embeddings): Embedding(14709, 64, padding_idx=14708)
+  (rel_embeddings): Embedding(20, 64)
+  (norm_embeddings): Embedding(20, 64)
+)
+2022-02-15 18:00:59,617 - root - INFO - Total params: 1541696.0
+2022-02-15 18:00:59,617 - root - INFO - One epoch is 2741 steps.
+2022-02-15 18:00:59,618 - root - INFO - Training.
+2022-02-15 18:00:59,618 - root - INFO - rec train loss:0.0000, kg train loss:0.0000!
+2022-02-15 18:01:08,855 - root - INFO - f1:0.0020, p:0.0033, r:0.0019, hit:0.0318, ndcg:0.0173, topn:10.
+2022-02-15 18:01:20,217 - root - INFO - f1:0.0023, p:0.0061, r:0.0018, hit:0.0570, ndcg:0.0324, topn:10.
+2022-02-15 18:02:47,103 - root - INFO - head hit:0.0006, head mean rank:7068.7205, topn:10.
+2022-02-15 18:02:47,104 - root - INFO - tail hit:0.0005, tail mean rank:7220.9901, topn:10.
+2022-02-15 18:02:47,104 - root - INFO - avg hit:0.0005, avg mean rank:7144.8553, topn:10.
+2022-02-15 18:04:47,553 - root - INFO - head hit:0.0004, head mean rank:7068.2511, topn:10.
+2022-02-15 18:04:47,554 - root - INFO - tail hit:0.0005, tail mean rank:7211.4767, topn:10.
+2022-02-15 18:04:47,555 - root - INFO - avg hit:0.0005, avg mean rank:7139.8639, topn:10.
+2022-02-15 18:07:51,230 - root - INFO - rec train loss:85.9841, kg train loss:342.0564!
+2022-02-15 18:08:01,495 - root - INFO - f1:0.0341, p:0.0548, r:0.0342, hit:0.3624, ndcg:0.2021, topn:10.
+2022-02-15 18:08:10,867 - root - INFO - f1:0.0399, p:0.0939, r:0.0344, hit:0.4927, ndcg:0.2885, topn:10.
+2022-02-15 18:09:31,772 - root - INFO - head hit:0.0035, head mean rank:5114.2756, topn:10.
+2022-02-15 18:09:31,773 - root - INFO - tail hit:0.1280, tail mean rank:4323.1090, topn:10.
+2022-02-15 18:09:31,773 - root - INFO - avg hit:0.0658, avg mean rank:4718.6923, topn:10.

@@ -1,0 +1,70 @@
+2022-02-15 17:52:30,147 - root - INFO - Flag Values:
+{
+    "L1_flag": false,
+    "batch_size": 512,
+    "ckpt_path": "/export/data/RA_Work/LipingWang/joint-kg-recommender_fork/log/",
+    "clipping_max_value": 5.0,
+    "data_path": "/export/data/RA_Work/LipingWang/joint-kg-recommender_fork/datasets/",
+    "dataset": "ml1m",
+    "early_stopping_steps_to_wait": 70000,
+    "embedding_size": 64,
+    "eval_interval_steps": 14000,
+    "eval_only_mode": false,
+    "experiment_name": "ml1m-jtransup-1644918750",
+    "filter_wrong_corrupted": true,
+    "has_visualization": false,
+    "is_report": false,
+    "joint_ratio": 0.5,
+    "kg_lambda": 1.0,
+    "kg_test_files": "valid.dat:test.dat",
+    "l2_lambda": 1e-05,
+    "learning_rate": 0.001,
+    "learning_rate_decay_when_no_progress": 0.5,
+    "load_ckpt_file": null,
+    "load_experiment_name": null,
+    "log_level": "debug",
+    "log_path": "/export/data/RA_Work/LipingWang/joint-kg-recommender_fork/log/",
+    "margin": 1.0,
+    "max_queue": 10,
+    "model_type": "jtransup",
+    "momentum": 0.9,
+    "negtive_samples": 1,
+    "norm_lambda": 1.0,
+    "num_preferences": 4,
+    "num_processes": 4,
+    "optimizer_type": "Adagrad",
+    "rec_test_files": "valid.dat:test.dat",
+    "seed": 0,
+    "share_embeddings": false,
+    "topn": 10,
+    "training_steps": 1400000,
+    "use_st_gumbel": false,
+    "visualization_port": 8097
+}
+2022-02-15 17:52:32,497 - root - INFO - Totally 701669 train ratings, 103239,193631 eval ratings in files: /export/data/RA_Work/LipingWang/joint-kg-recommender_fork/datasets/ml1m/valid.dat;/export/data/RA_Work/LipingWang/joint-kg-recommender_fork/datasets/ml1m/test.dat!
+2022-02-15 17:52:32,517 - root - INFO - successfully load 6040 users and 3260 items!
+2022-02-15 17:52:35,475 - root - INFO - Totally 303935 train triples, 43419,86835 eval triples in files: /export/data/RA_Work/LipingWang/joint-kg-recommender_fork/datasets/ml1m/kg/valid.dat;/export/data/RA_Work/LipingWang/joint-kg-recommender_fork/datasets/ml1m/kg/test.dat!
+2022-02-15 17:52:35,521 - root - INFO - successfully load 14708 entities and 20 relations!
+2022-02-15 17:52:35,917 - root - INFO - Find 2934 aligned items and entities!
+2022-02-15 17:52:35,918 - root - INFO - Building model.
+2022-02-15 17:52:39,963 - root - INFO - Architecture: jTransUPModel(
+  (user_embeddings): Embedding(6040, 64)
+  (item_embeddings): Embedding(3260, 64)
+  (pref_embeddings): Embedding(20, 64)
+  (pref_norm_embeddings): Embedding(20, 64)
+  (ent_embeddings): Embedding(14709, 64, padding_idx=14708)
+  (rel_embeddings): Embedding(20, 64)
+  (norm_embeddings): Embedding(20, 64)
+)
+2022-02-15 17:52:39,963 - root - INFO - Total params: 1541696.0
+2022-02-15 17:52:39,963 - root - INFO - One epoch is 2741 steps.
+2022-02-15 17:52:39,964 - root - INFO - Training.
+2022-02-15 17:52:39,964 - root - INFO - rec train loss:0.0000, kg train loss:0.0000!
+2022-02-15 17:52:49,130 - root - INFO - f1:0.0021, p:0.0035, r:0.0020, hit:0.0341, ndcg:0.0171, topn:10.
+2022-02-15 17:53:00,559 - root - INFO - f1:0.0023, p:0.0067, r:0.0018, hit:0.0599, ndcg:0.0308, topn:10.
+2022-02-15 17:54:28,023 - root - INFO - head hit:0.0005, head mean rank:7111.1408, topn:10.
+2022-02-15 17:54:28,024 - root - INFO - tail hit:0.0007, tail mean rank:7216.4085, topn:10.
+2022-02-15 17:54:28,024 - root - INFO - avg hit:0.0006, avg mean rank:7163.7746, topn:10.
+2022-02-15 17:56:27,962 - root - INFO - head hit:0.0008, head mean rank:7097.8337, topn:10.
+2022-02-15 17:56:27,963 - root - INFO - tail hit:0.0008, tail mean rank:7199.3943, topn:10.
+2022-02-15 17:56:27,964 - root - INFO - avg hit:0.0008, avg mean rank:7148.6140, topn:10.
